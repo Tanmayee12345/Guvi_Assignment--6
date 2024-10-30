@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <!-- Logo -->
+      <a href="/" class="logo">
+        <img src="../../assets/logo.png" alt="Logo" class="logo-image">
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search here..." />
+      </div>
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle-home">
+            Home <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#home">Home Option 1</a>
+            <a href="#services">Home Option 2</a>
+            <a href="#contact">Home Option 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            Pages <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#home">Pages Option 1</a>
+            <a href="#services">Pages Option 2</a>
+            <a href="#contact">Pages Option 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            Insurance <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#home">Insurance Option 1</a>
+            <a href="#services">Insurance Option 2</a>
+            <a href="#contact">Insurance Option 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            Blog <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#home">Blog Option 1</a>
+            <a href="#services">Blog Option 2</a>
+            <a href="#contact">Blog Option 3</a>
+          </div>
+        </div>
+     
+        <a href="/about" class="contact">Contact Us</a>
+        <div class="right-side">
+          <a href="/phone" class="phone-link">
+            <img src="../../assets/phone.png" alt="Phone"> +(111)65 458 856
+          </a>
+          <button class="get-quote-button">Get A Quote</button>
+          <img src="../../assets/bar.png"  alt="Menu Bar" class="bar float-right" >
+        </div>
+        
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" (click)="toggleMobileMenu()">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobileMenu" class="mobile-menu" [class.active]="isMenuOpen">
+      <nav class="flex flex-col p-4">
+        <a href="/" class="text-gray-700 hover:text-blue-500">Home</a>
+        <a href="/about" class="text-gray-700 hover:text-blue-500">Pages</a>
+        <a href="/services" class="text-gray-700 hover:text-blue-500">Insurance</a>
+        <a href="/blog" class="text-gray-700 hover:text-blue-500">Blog</a>
+        <a href="/contact" class="text-gray-700 hover:text-blue-500">Contact Us</a>
+        
+        <button class="get-quote-button">Get A Quote</button>
+      </nav>
+    </div>
+  </header>
+
+</body>
+</html>

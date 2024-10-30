@@ -1,0 +1,228 @@
+$primary-color: #3eb0a6; 
+$hover-background: #f1f1f1;
+
+header {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-image {
+  width: 100px;
+}
+
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: 40px;
+  display: flex;
+
+  
+  padding: 1rem 1px;
+ 
+
+}
+
+.logo {
+  text-decoration: none;
+  .logo-image {
+    height: 40px;
+  }
+}
+.contact{
+  font-weight: bold;
+
+}
+
+// Search bar styling
+.search-bar {
+  flex: 1;
+  margin: 0 30px;
+
+  input {
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.2);
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 5px rgba($primary-color, 0.5);
+    }
+  }
+}
+
+// Navigation links and right-aligned items container
+.nav-links,
+.right-side {
+  display: flex;
+  align-items: center;
+}
+
+// Dropdown styles
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  .dropdown-toggle {
+   
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 1rem;
+
+    i {
+      margin-left: 5px;
+    }
+  }
+  .dropdown-toggle-home {
+    color: $primary-color;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 1rem;
+
+    i {
+      margin-left: 5px;
+    }
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 1;
+    margin-right: 20rem;
+
+    a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      margin-right: 2px;
+
+      &:hover {
+        background-color: $hover-background;
+      }
+    }
+  }
+
+  &:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+// Phone link and button styling for right alignment
+.phone-link {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 1rem;
+  margin-left: 3rem;
+
+  img {
+    margin-right: 8px;
+    width: 35px;
+    height: 35px;
+   
+  }
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.get-quote-button {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.bar {
+  margin-left: 1rem;
+  margin-right: 0px;
+  width: 30px;
+float: right;
+}
+
+
+// Mobile menu button
+.mobile-menu-btn {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: flex;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;  // Position it relative to the header container
+    left: 1rem;          // Move it to the left
+
+    svg {
+      margin-left: 0;    // Reset any left margin
+      height: 24px;
+      width: 24px;
+      color: $primary-color;
+    }
+  }
+}
+
+// Mobile navigation menu styling
+.mobile-menu {
+  display: none;
+  background-color: #f8f8f8;
+  font-weight: bold;
+
+  &.active {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2px;
+  }
+
+  a {
+    padding-bottom: 1rem;
+    font-weight: bold;
+  }
+}
+
+// Responsive styles
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-links {
+    display: none;
+  }
+}
+
